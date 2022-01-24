@@ -1,160 +1,41 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 	<head>
-		<title>Sanya Gowda | Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style>
+			body {
+				width: 100%;
+				height: 100%;
+				margin: 0;
+				position: fixed;
+				background: rgba(255,235,207, 1);
+			}
+			canvas { width: 100%; height: 100%; outline: none; }
+			#container { width: 100%; height: 100%; position: relative; }
+			
+					.spline-watermark {
+						position: absolute;
+						bottom: 16px;
+						right: 16px;
+						width: 32px;
+						height: 32px;
+						z-index: 2;
+					}
+					.spline-watermark:hover {
+						opacity: 0.8;
+					}
+					.spline-watermark img {
+						display: block;
+						width: 100%;
+						height: 100%;
+					}
+				
+		</style>
+		<title>Library - Shapes Animation</title>
+		<link rel="icon" type="image/png" href="https://app.spline.design/_assets/_icons/icon_favicon16x16.png" sizes="16x16">
+		<link rel="icon" type="image/png" href="https://app.spline.design/_assets/_icons/icon_favicon32x32.png" sizes="32x32">
+
+		<link rel="preload" href="./scene.json" as="fetch">
 	</head>
-	<body class="is-preload">
-
-		<!-- Wrapper -->
-			<div id="wrapper">
-
-				<!-- Header -->
-					<header id="header" class="alt">
-						<a href="index.html" class="logo"><strong>Sanya Gowda</strong> <span>Digital Portfolio</span></a>
-						<nav>
-							<a href="#menu">Menu</a>
-						</nav>
-					</header>
-
-				<!-- Menu -->
-					<nav id="menu">
-						<ul class="links">
-							<li><a href="index.html">Home</a></li>
-						</ul>
-					</nav>
-
-				<!-- Banner -->
-					<section id="banner" class="major">
-						<div class="inner">
-							<header class="major">
-								<h1>Hi, my name is Sanya Gowda :)</h1>
-							</header>
-							<div class="content">
-								<p>I'm a high school student with an eye for design and love for computer science.</p>
-								<ul class="actions">
-									<li><a href="#one" class="button next scrolly">Learn More</a></li>
-								</ul>
-							</div>
-						</div>
-					</section>
-
-				<!-- Main -->
-					<div id="main">
-
-						<!-- One -->
-							<section id="one" class="tiles">
-								<article>
-									<span class="image">
-										<img src="images/pic01.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="landing.html" class="link">Current</a></h3>
-										<p>Projects that I'm working on now.</p>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/pic02.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="landing.html" class="link">Archive</a></h3>
-										<p>My previous work.</p>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/pic03.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="landing.html" class="link">Blog</a></h3>
-										<p>Want to learn more about me and what I do? This is the place!</p>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/pic04.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="landing.html" class="link">Social Media</a></h3>
-										<p>Follow me on my journey.</p>
-									</header>
-								</article>
-							</section>
-
-					</div>
-
-				<!-- Contact -->
-					<section id="contact">
-						<div class="inner">
-							<section>
-								<form method="post" action="#">
-									<div class="fields">
-										<div class="field half">
-											<label for="name">Name</label>
-											<input type="text" name="name" id="name" />
-										</div>
-										<div class="field half">
-											<label for="email">Email</label>
-											<input type="text" name="email" id="email" />
-										</div>
-										<div class="field">
-											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="6"></textarea>
-										</div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="primary" /></li>
-										<li><input type="reset" value="Clear" /></li>
-									</ul>
-								</form>
-							</section>
-							<section class="split">
-								<section>
-									<div class="contact-method">
-										<span class="icon solid alt fa-envelope"></span>
-										<h3>Email</h3>
-										<a href="#">sanyagowda.sg@gmail.com</a>
-									</div>
-								</section>
-								<section>
-									<div class="contact-method">
-										<span class="icon solid alt fa-phone"></span>
-										<h3>Phone</h3>
-										<span>+1 (408) 646-2405</span>
-									</div>
-								</section>
-							</section>
-						</div>
-					</section>
-
-				<!-- Footer -->
-					<footer id="footer">
-						<div class="inner">
-							<ul class="icons">
-								<li><a href="https://www.instagram.com/o.ppositive/" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-								<li><a href="https://github.com/Sangoda" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-								<li><a href="https://www.linkedin.com/in/sanya-gowda-03458b1a1/" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-							</ul>
-							<ul class="copyright">
-								<li>&copy; www.sanyagowda.com</li><li>Website Design From: <a href="https://html5up.net">HTML5 UP</a></li>
-							</ul>
-						</div>
-					</footer>
-
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
 </html>
