@@ -8,7 +8,7 @@ type SidebarProps = {
 const Sidebar: React.FC<SidebarProps> = ({ items }) => {
   return (
     <div className="sidebar">
-      <img src="./public/BlackLogo.png" alt="Logo" className="banner-logo-sidebar" />
+      <img src="/BlackLogo.png" alt="Logo" className="banner-logo-sidebar" />
       {items.map((item, index) => (
         
         <React.Fragment key={index}>
@@ -26,9 +26,9 @@ const Sidebar: React.FC<SidebarProps> = ({ items }) => {
         </React.Fragment>
       ))}
       <div className="sidebar-social-container">
-        <img src="./public/ig.png" alt="Logo" className="sidebar-social" />
-        <img src="./public/LinkedInBlack.png" alt="Logo" className="sidebar-social" />
-        <img src="./public/gh.png" alt="Logo" className="sidebar-social" />
+        <img src="/ig.png" alt="Logo" className="sidebar-social" />
+        <img src="/LinkedInBlack.png" alt="Logo" className="sidebar-social" />
+        <img src="/gh.png" alt="Logo" className="sidebar-social" />
 
         </div>
 
