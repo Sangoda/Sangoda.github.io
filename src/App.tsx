@@ -1,34 +1,44 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import Banner from './components/Banner';
+import Sidebar from './components/Sidebar';
+import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Banner /> {/* Just sits at the top */}
+      <Sidebar items={["Projects", "About Me", "CV", "Contact"]} />
+      
+    <div style={{ marginLeft: '300px', padding: '20px' }}>
+        <div className = 'title'><div className = 'title-component-red'>1_</div>
+        <div className = 'title-component'>Projects</div>
+        </div>
     </div>
-  )
+
+        <div className="project-boxes">
+            <div className="project-box"></div>
+            <div className="project-box"></div>
+        </div>
+        <div className="project-boxes">
+            <div className="project-box"></div>
+            <div className="project-box"></div>
+        </div>
+
+    <div style={{ marginLeft: '300px', padding: '20px' }}>
+        <div className = 'title'><div className = 'title-component-red'>2_</div>
+        <div className = 'title-component'>About Me</div>
+        </div>
+    </div>
+
+    <div style={{ marginLeft: '300px', padding: '20px' }}>
+        <div className = 'title'><div className = 'title-component-red'>3_</div>
+        <div className = 'title-component'>CV</div>
+        </div>
+    </div>
+
+    
+
+    </div>
+  );
 }
 
-export default App
+export default App;

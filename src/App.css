@@ -1,42 +1,71 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+
+.App {
+  background-color: #EDEDED;
+  color: #1a1a1a;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  min-height: 100vh;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.App h1 {
+  margin-top: 50px;
+  font-weight: 700; /* Force the correct weight */
+  font-family: inherit; /* Optional: inherit from .App */
+  font-size: 48px
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.App .title {
+  display: flex;
+
+}
+
+.App .title-component {
+  margin-top: 50px;
+  font-weight: 700; /* Force the correct weight */
+  font-family: inherit; /* Optional: inherit from .App */
+  font-size: 48px
+}
+
+.App .title-component-red {
+  margin-top: 50px;
+  font-weight: 700; /* Force the correct weight */
+  font-family: inherit; /* Optional: inherit from .App */
+  font-size: 48px;
+  color: #d4492a;
+}
+/* Style for Projects section */
+.project-boxes {
+  margin-left: 350px;
+  display: grid;
+  grid-template-columns: repeat(2, 400px);  /* 2 columns, each 400px wide */
+  gap: 20px;  /* Space between the boxes */
+  margin-top: 20px;  /* Space between title and boxes */
+}
+
+.project-box {
+  width: 400px;  /* Width of each box */
+  height: 200px;  /* Height of each box */
+  background-color: #B0B0B0;  /* Grey color for the box */
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 8px; /* Optional: Rounded corners for a better look */
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);  /* Optional: Add shadow for depth */
+}
+
+/* Responsive media query for narrow screens */
+@media (max-width: 900px) {
+  .project-boxes {
+    grid-template-columns: 1fr;  /* Stack all 4 boxes in a single column */
+    grid-template-rows: auto;   /* Adjust the row height */
   }
-  to {
-    transform: rotate(360deg);
+
+  .project-box {
+    width: 100%;  /* Make the boxes take up the full width */
+    height: 150px;  /* Adjust height for stacked layout */
+    margin-left: 0; /* Remove left margin */
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
