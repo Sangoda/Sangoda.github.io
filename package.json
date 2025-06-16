@@ -1,8 +1,9 @@
 {
-  "homepage": "https://Sangoda.github.io",
-  "name": "sangoda.github.io",
-  "private": true,
+  "homepage": "https://sangoda.github.io/",
+  "name": "react-app",
+  "private": false,
   "version": "0.0.0",
+  "type": "module",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
@@ -25,3 +26,4 @@
     "vite": "^4.1.0"
   }
 }
+
