@@ -1,71 +1,34 @@
+html {
+  scroll-behavior: smooth;
+}
 
 .App {
-  background-color: #EDEDED;
+  background-color: #ffffff;
   color: #1a1a1a;
   font-family: 'Inter', sans-serif;
-  font-weight: 400;
   min-height: 100vh;
 }
-
-.App h1 {
-  margin-top: 50px;
-  font-weight: 700; /* Force the correct weight */
-  font-family: inherit; /* Optional: inherit from .App */
-  font-size: 48px
+.background {
+  background-image: url("./sf-light.jpg");
+  background-attachment: fixed;
+  background-position: 50% 20%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  transition: background-image 0.3s ease;
 }
 
-.App .title {
-  display: flex;
-
+/* Dark mode version */
+body.dark-mode .background {
+  background-image: url("/sf-dark.jpg");
 }
 
-.App .title-component {
-  margin-top: 50px;
-  font-weight: 700; /* Force the correct weight */
-  font-family: inherit; /* Optional: inherit from .App */
-  font-size: 48px
-}
 
-.App .title-component-red {
-  margin-top: 50px;
-  font-weight: 700; /* Force the correct weight */
-  font-family: inherit; /* Optional: inherit from .App */
-  font-size: 48px;
-  color: #d4492a;
-}
-/* Style for Projects section */
-.project-boxes {
-  margin-left: 350px;
-  display: grid;
-  grid-template-columns: repeat(2, 400px);  /* 2 columns, each 400px wide */
-  gap: 20px;  /* Space between the boxes */
-  margin-top: 20px;  /* Space between title and boxes */
-}
-
-.project-box {
-  width: 400px;  /* Width of each box */
-  height: 200px;  /* Height of each box */
-  background-color: #B0B0B0;  /* Grey color for the box */
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: bold;
-  font-size: 16px;
-  border-radius: 8px; /* Optional: Rounded corners for a better look */
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);  /* Optional: Add shadow for depth */
-}
-
-/* Responsive media query for narrow screens */
-@media (max-width: 900px) {
-  .project-boxes {
-    grid-template-columns: 1fr;  /* Stack all 4 boxes in a single column */
-    grid-template-rows: auto;   /* Adjust the row height */
-  }
-
-  .project-box {
-    width: 100%;  /* Make the boxes take up the full width */
-    height: 150px;  /* Adjust height for stacked layout */
-    margin-left: 0; /* Remove left margin */
-  }
+.content {
+  position: relative;
+  z-index: 1;
+  padding-top: 4rem;
+  color: white; /* can be overridden if needed */
 }
