@@ -1,0 +1,13 @@
+.section-title {
+    font-family: 36px;
+    font-size: 40px;
+    font-weight: 700;
+}
+.tight-line {
+  line-height: 1.2;
+}
+
+.white-background {
+  background-color: rgb(255, 255, 255);
+  color: black;
+}

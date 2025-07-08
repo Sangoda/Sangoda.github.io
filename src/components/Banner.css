@@ -1,44 +1,112 @@
+/* ───── Banner Container ───── */
 .banner {
-  margin-left: 250px; /* shift banner over to exclude sidebar */
-  width: calc(100% - 250px); /* shrink to remaining width */
-  height: 400px;
-  background-color: #d9d9d9;
+  height: clamp(50px, 40vh, 1000px); /* Responsive height */
   display: flex;
   justify-content: center;
   overflow: hidden;
+  position: relative;
 }
 
 .banner-content {
+  margin-top: 120px;
   display: flex;
   align-items: center;
   gap: 15px;
+  position: relative;
 }
 
-.banner-logo {
-  height: 95px; /* Adjust as needed */
-  margin-top: 37px;
-}
 
+/* ───── Main Title Text (if using Inter) ───── */
 .banner-text h1 {
-  font-size: 36px;
+  font-size: 69px;
   font-weight: 700;
   font-family: 'Inter', sans-serif;
   color: #111;
-  line-height: 0;
+  line-height: 0.7;
 }
 
-/* Blinking cursor effect */
+/* ───── Logo Layout ───── */
+.logo-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin-bottom: 200px;
+}
+
+/* ───── Shared Logo Styles ───── */
+.logo-part {
+  font-size: clamp(2rem, 10vw, 120px); /* responsive between min and max */
+  color: #db3f10;
+  line-height: 1;
+}
+
+/* ───── SANYA Styles ───── */
+.sanya {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900; /* extra thick */
+  letter-spacing: -0.03em;
+}
+
+/* Optional italic versions if needed later */
+.logo-part-a1,
+.logo-part-a2 {
+  font-style: italic;
+}
+
+/* ───── Adjust Kerning on Second A ───── */
+.logo-part.sanya.a1 {
+  margin-left: -8.5px;
+  font-style: italic;
+}
+
+.logo-part.sanya.a2 {
+  margin-left: -25px;
+  font-style: italic; 
+  margin-right: 5px;
+}
+
+.logo-part.sanya.y {
+  margin-left: -4px; 
+  margin-right: 5px;
+}
+
+/* ───── GOWDA Styles ───── */
+.gowda {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  margin-left: -2px;
+  margin-bottom: 10px;
+    letter-spacing: -0.07em; /* ↓ Tightens spacing between letters */
+}
+
+/* ───── Blinking Cursor Animation ───── */
 .blinking-cursor {
   display: inline-block;
-  width: 10px; /* Width of the blinking cursor */
-  background-color: black; /* Color of the cursor */
-  opacity: 1; /* Initially visible */
-  animation: blink 1s step-end infinite; /* Blink effect */
+  width: 5px;
+  background-color: black;
+  opacity: 1;
+  animation: blink 1s step-end infinite;
 }
 
-/* Blinking animation */
+.rectangle {
+  font-size: 10.5px;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  width: 400px;
+  height: 20px;
+  background-color: #db3f10;
+  z-index: 2;
+  display: flex;
+  justify-content: center; /* centers text horizontally */
+  align-items: center;     /* centers text vertically */
+  color: rgb(255, 255, 255);            /* optional: better contrast */
+}
+
 @keyframes blink {
   50% {
-    opacity: 0; /* Make the cursor disappear */
+    opacity: 0;
   }
 }
+
